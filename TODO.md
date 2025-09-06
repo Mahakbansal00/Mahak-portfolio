@@ -1,0 +1,1 @@
+- [x] Update src/main.jsx to replace BrowserRouter with HashRouter and wrap App component

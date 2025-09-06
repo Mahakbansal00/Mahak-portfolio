@@ -3,7 +3,7 @@ import "./InternshipExperience.css"; // Import the CSS file
 
 const internships = [
   {
-    company: "Ducat School of Ai,Delhi",
+    company: "Ducat School of Ai,Gurgaon",
     role: "FullStack Developer Intern",
     duration: "feb 2025 - sep 2025",
     description:
