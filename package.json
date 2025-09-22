@@ -11,9 +11,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
+
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+
+    "vercel-build": "vite build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -27,7 +29,7 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
     "react-scroll": "^1.9.3",
-    "vite": "^5.3.1"   
+    "vite": "^5.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
@@ -42,7 +44,8 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "cross-env": "^7.0.3"
   },
   "overrides": {
     "glob": "^11.0.3"
