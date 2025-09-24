@@ -1,41 +1,21 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./Contact.css";
-import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const form = useRef();
-
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_fmkmbre", // e.g., service_xxxx
-        "template_87es6ye", // e.g., template_xxxx
-        form.current,
-        "mCs54LcKjTmP-4G_2" // e.g., wP5Yz_xxxxx
-      )
-      .then(
-        (result) => {
-          alert("Message sent successfully! ✅");
-          form.current.reset();
-        },
-        (error) => {
-          console.error("EmailJS error:", error.text);
-          console.log("Sending form data:", form.current);
-
-          alert("Failed to send message ❌. Try again.");
-        }
-      );
+    // Web3Forms will handle the submission
+    alert("Message sent successfully! ✅");
+    e.target.reset();
   };
-  console.log("Sending form data:", form.current);
 
   return (
     <section className="contact section" id="contact">
       <h2 className="section-title">Contact Me</h2>
 
       <div className="contact-container">
-        <form className="contact-form" ref={form} onSubmit={sendEmail}>
+        <form className="contact-form" action="https://api.web3forms.com/submit" method="POST" onSubmit={handleSubmit}>
+          <input type="hidden" name="access_key" value="b177fba9-7f8d-4115-a378-103b73b7248c" />
           <input type="text" name="name" placeholder="Mahak Bansal" required />
           <input type="email" name="email" placeholder="Mahakbansal58@gmail.com" required />
           <textarea
@@ -44,7 +24,7 @@ export default function Contact() {
             rows="5"
             required
           ></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit">Submit Form</button>
         </form>
 
         <div className="contact-info">
