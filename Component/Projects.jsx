@@ -7,14 +7,14 @@ const projectData = [
     description:
       "A responsive e-commerce frontend built with React. Includes product listings, cart, and modern UI.",
     link: "https://exquisite-peony-2a7ab0.netlify.app/",
-    image: "./a.png", // Place this in public/images/
+    image: "./images/a.png", // Place this in public/images/
   },
   {
     title: "Tiny Process",
     description:
       "A modern web application built with Framer. Features interactive UI components and responsive design.",
     link: "https://tiny-process-923710.framer.app/",
-    image: "./b.png", // Using the same placeholder image
+    image: "./images/b.png", // Using the same placeholder image
   },
 ];
 export default function Projects() {
