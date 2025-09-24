@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Web3Forms will handle the submission
-    alert("Message sent successfully! ✅");
-    e.target.reset();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log("Submitting form data:", data);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+      console.log("Web3Forms response:", result);
+
+      if (response.ok) {
+        alert("Message sent successfully! ✅");
+        e.target.reset();
+      } else {
+        alert(`Error: ${result.message || "Failed to send message. Please try again."}`);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Error: Unable to send message. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -24,7 +51,9 @@ export default function Contact() {
             rows="5"
             required
           ></textarea>
-          <button type="submit">Submit Form</button>
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Submit Form"}
+          </button>
         </form>
 
         <div className="contact-info">
