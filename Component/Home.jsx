@@ -14,7 +14,7 @@ export default function Home() {
           skilled in React, Node.js, Spring Boot, MySQL, Angular <br />
           and solved <strong>1000+ coding problems</strong>.
         </p>
-        <a href="/final-me-resume.pdf" download="Mahak_Bansal_Resume.pdf" className="btn">
+        <a href="./final-me-resume.pdf" download="Mahak_Bansal_Resume.pdf" className="btn">
           Download Resume
         </a>
         <div className="social-links">
