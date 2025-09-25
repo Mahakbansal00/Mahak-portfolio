@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="about section">
       <div className="about-container">
         <div className="about-left" data-aos="fade-right">
-<img src="public/images/c.jpg" alt="Mahak Bansal" />
+<img src="./images/c.jpg" alt="Mahak Bansal" />
         </div>
 
         <div className="about-right" data-aos="fade-left">

@@ -16,6 +16,13 @@ const projectData = [
     link: "https://tiny-process-923710.framer.app/",
     image: "./images/b.png", // Using the same placeholder image
   },
+  {
+    title: "Weather API",
+    description:
+      "A simple React app that shows real-time weather data using WeatherAPI, with search functionality and a clean responsive UI.",
+    link: "https://mahakbansal00.github.io/WeatherAPI/",
+    image: "./images/d.png",
+  },
 ];
 export default function Projects() {
   return (
