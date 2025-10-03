@@ -35,6 +35,4 @@ LinkedIn: https://www.linkedin.com/in/mahak-bansal-2902b2284/
 GitHub: https://github.com/Mahakbansal00
 Email: mahakbansal82@gmail.com
 ![alt text](<Screenshot 2025-08-16 at 13.33.34.png>)# Mahak_Bansal
-# Mahak_Bansal
-# Mahak_Bansal
-# Mahak_Bansal
+
