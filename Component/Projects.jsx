@@ -23,6 +23,13 @@ const projectData = [
     link: "https://mahakbansal00.github.io/WeatherAPI/",
     image: "./images/d.png",
   },
+  {
+    title: "NCERT Revision App",
+    description:
+      "PDF viewer + Quiz + Dashboard + Chat UI + RAG placeholders.",
+    link: "https://ncert-revision-app.vercel.app",
+    image: "./images/e.png",
+  },
 ];
 export default function Projects() {
   return (
